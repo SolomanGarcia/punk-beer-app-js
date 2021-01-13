@@ -2,8 +2,8 @@
 const urlBase = "https://api.punkapi.com/v2/beers";
 const filterABV = document.getElementById("filterABV");
 const filterIBU = document.getElementById("filterIBU");
-let optionsABV = "",
-  optionsIBU = "";
+let optionsABV = "";
+let optionsIBU = "";
 
 // filters
 filterABV.addEventListener("change", (e) => {
@@ -38,7 +38,7 @@ filterIBU.addEventListener("change", (e) => {
       optionsIBU = "ibu_lt=35";
       break;
     case "medium":
-      optionsIBU = "ibu_gt=34&abv_lt=75";
+      optionsIBU = "ibu_gt=34&ibu_lt=75";
       break;
     case "strong":
       optionsIBU = "ibu_gt=74";

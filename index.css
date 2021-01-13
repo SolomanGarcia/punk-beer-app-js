@@ -115,8 +115,8 @@ input + svg {
 }
 
 .hops:hover,
-.hops:checked + span,
-.hops:focus + span {
+.hops:checked + svg,
+.hops:focus + svg {
   fill: var(--green);
 }
 
