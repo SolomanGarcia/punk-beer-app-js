@@ -119,3 +119,18 @@ input + svg {
 .hops:focus + span {
   fill: var(--green);
 }
+
+/* pagination buttons */
+.page-btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 2rem;
+  padding: 0 .8rem;
+  color: var(--off-white);
+  cursor: pointer;
+  transition: color .3s ease;
+}
+.page-btn:hover {
+  color: var(--blue);
+}
