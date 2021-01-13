@@ -196,3 +196,22 @@ input + svg {
   line-height: 1.07em;
   letter-spacing: -0.015em;
 }
+
+.beer__tagline {
+  padding-bottom: .5rem;
+  font-family: "Old Standard TT", serif;
+  font-style: italic;
+  border-bottom: 2px solid var(--blue);
+}
+
+.beer__description {
+  margin: 1rem 0;
+  font-size: .9rem;
+  line-height: 1.3rem;
+}
+
+.beer__food-pairing {
+  font-style: italic;
+  font-size: .9rem;
+  line-height: 1.3em;
+}
