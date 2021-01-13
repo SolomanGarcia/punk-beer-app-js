@@ -18,13 +18,13 @@ filterABV.addEventListener("change", (e) => {
       optionsABV = "";
       break;
     case "weak":
-      optionsABV = "abv_lt=4.6";
+      optionsABV = "&abv_lt=4.6";
       break;
     case "medium":
-      optionsABV = "abv_gt=4.5&abv_lt=7.6";
+      optionsABV = "&abv_gt=4.5&abv_lt=7.6";
       break;
     case "strong":
-      optionsABV = "abv_gt=7.5";
+      optionsABV = "&abv_gt=7.5";
       break;
   }
 
@@ -78,12 +78,16 @@ async function getBeers() {
   const beersDiv = document.querySelector(".beers");
 
   let beerHtml = "";
+  const genericBottle =
+    "https://cdn.pixabay.com/photo/2014/12/22/00/04/bottle-576717_960_720.png";
 
   beers.forEach((beer) => {
     beerHtml += `
       <div class="beer-wrapper card">
         <div class="beer">
-          <img class="beer__img" src="${beer.image_url}">
+          <img class="beer__img" src="${
+            beer.image_url ? beer.image_url : genericBottle
+          }">
           <h3>${beer.name}</h3>
           <span class="beer__info">
             <span>ABV: ${beer.abv}%</span>
